@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './components/Home';
+import AddQuestionForm from './components/AddQuestionForm';
+import AddQuestionPage from './Pages/AddQuestionPage';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/question" element={<AddQuestionForm />} />
+        <Route exact path="/Addquestion" element={<AddQuestionPage />} />
+
+
+      </Routes>
+    </BrowserRouter>
   );
-}
+};
+// const App = () => {
+//   return (
+//     <BrowserRouter>
+ 
+
+//           <Routes>
+//             <Route exact path="/" component={<Home />} />
+//             {/* <Route exact path="/about" component={<About />} />
+//             <Route exact path="/products" component={<Products />} /> */}
+//             {/* <Route
+//               path="/products/:category"
+//               render={(props) => (
+//                 <Products category={props.match.params.category} />
+//               )}
+//             /> */}
+//             {/* <Route exact path="/contact" component={<Contact/>} /> */}
+//           </Routes>
+ 
+    
+//     </BrowserRouter>
+//   );
+// }; 
 
 export default App;
