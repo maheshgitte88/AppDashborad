@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
 import AddQuestionForm from './components/AddQuestionForm';
 import AddQuestionPage from './Pages/AddQuestionPage';
+import AllBets from './Pages/AllBets';
 
 const App = () => {
   return (
@@ -11,8 +12,7 @@ const App = () => {
         <Route exact path="/" element={<Home />} />
         <Route exact path="/question" element={<AddQuestionForm />} />
         <Route exact path="/Addquestion" element={<AddQuestionPage />} />
-
-
+        <Route exact path="/allbets" element={<AllBets />} />
       </Routes>
     </BrowserRouter>
   );
