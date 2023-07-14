@@ -32,21 +32,17 @@ const AddQuestionForm = ({ matchId }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     const newQuestion = {
       matchId,
       question,
       options,
       ratios,
     };
-
     try {
       const response = await axios.post('http://localhost:4000/question/add/64a45285d2e3686003d6c63e', newQuestion);
       console.log(response.data);
-      // Handle success or perform any additional actions
     } catch (error) {
       console.error(error);
-      // Handle error or display error message to the user
     }
   };
 

@@ -4,40 +4,29 @@ import Home from './components/Home';
 import AddQuestionForm from './components/AddQuestionForm';
 import AddQuestionPage from './Pages/AddQuestionPage';
 import AllBets from './Pages/AllBets';
+import AllMatch from './Pages/AllMatch';
+import AllMatchesById from './Pages/AllMatchesById';
+import './App.css'
 
 const App = () => {
+
+
   return (
+    <>
+    
     <BrowserRouter>
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/question" element={<AddQuestionForm />} />
         <Route exact path="/Addquestion" element={<AddQuestionPage />} />
         <Route exact path="/allbets" element={<AllBets />} />
+        <Route exact path="/allmatches" element={<AllMatch />} />
+        <Route exact path="/allmatches/:id" element={<AllMatchesById />} />
+
       </Routes>
     </BrowserRouter>
+    </>
   );
 };
-// const App = () => {
-//   return (
-//     <BrowserRouter>
- 
-
-//           <Routes>
-//             <Route exact path="/" component={<Home />} />
-//             {/* <Route exact path="/about" component={<About />} />
-//             <Route exact path="/products" component={<Products />} /> */}
-//             {/* <Route
-//               path="/products/:category"
-//               render={(props) => (
-//                 <Products category={props.match.params.category} />
-//               )}
-//             /> */}
-//             {/* <Route exact path="/contact" component={<Contact/>} /> */}
-//           </Routes>
- 
-    
-//     </BrowserRouter>
-//   );
-// }; 
 
 export default App;
